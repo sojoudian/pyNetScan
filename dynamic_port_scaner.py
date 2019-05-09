@@ -9,7 +9,7 @@ for port in range(port):
         s.settimeout(2)
         print(port)
         s.connect((host, port))
-        print(s.recv(1024))
+        print("connected", s.recv(1024))
         s.close()
     except socket.error as error:
         print(error)
